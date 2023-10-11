@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    {% for seller in sellers %}
+        <a class="btn btn-primary" href="{{ path('app_seller_book', {id:seller.id}) }}">{{seller.title}}</a>
+    {% endfor %}
+    <a class="btn btn-primary" href="{{ path('app_post')}}">Post</a>
+{% endblock %}
